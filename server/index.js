@@ -69,6 +69,8 @@ app.post("/send", (req, res) => {
     balances[sender] -= amount;
     balances[recipient] = (balances[recipient] || 0) + +amount;
     res.send({ balance: balances[sender] });
+  }else{
+    console.log("it failed!");
   }
 });
 
